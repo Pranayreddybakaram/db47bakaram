@@ -4,30 +4,13 @@ block content
   h1= title
   p Search results fox  
   p 
-  div(class="container-fluid")
-        div(class="row")
-            -
-                let fox = [
-                    {
-                        "name": "Satish",
-                        "color": "black" ,
-                        "weight": 30
-                    },
-                    {
-                        "name": "harsha",
-                        "color": "brown" ,
-                        "weight": 25
-                    },
-                    {
-                        "name": "pranay",
-                        "color": "white" ,
-                        "weight": 40
-                    },                   
-                ]
-            each v,index in fox 
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.color}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.weight}
+  - let items = results
+   div(class="container-fluid")
+    div(class="row")
+      each v,index in items 
+       div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
+       div(class="col-sm-2" onclick=`buy(${index})`) #{v.color}
+       div(class="col-sm-2" onclick=`buy(${index})`) #{v.weight}
 
   script.                
         function buy(intemNo)

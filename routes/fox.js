@@ -1,9 +1,10 @@
 var express = require('express');
+const fox_controlers= require('../controllers/fox');
+
 var router = express.Router();
 
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('fox', { title: 'search results for fox' });
-});
+router.get('/', fox_controlers.fox_view_all_Page);
 
 module.exports = router;

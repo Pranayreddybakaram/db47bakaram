@@ -56,7 +56,7 @@ async function recreateDB(){
   console.log("Second object saved") 
   }); 
 
-  let instance3 = new fox({name:"*pranay",  color:"white", weight:40}); 
+  let instance3 = new fox({name:"pranay",  color:"white", weight:40}); 
   instance3.save( function(err,doc) { 
   if(err) return console.error(err); 
   console.log("Third object saved") 
