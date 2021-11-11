@@ -1,8 +1,15 @@
 var fox = require('../models/fox'); 
  
 // List of all foxs 
-exports.fox_list = function(req, res) { 
-    res.send('NOT IMPLEMENTED: fox list'); 
+exports.fox_list = async function(req, res) { 
+    try{ 
+        thefoxs = await fox.find(); 
+        res.send(thefoxs); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
 }; 
  
 // for a specific fox. 

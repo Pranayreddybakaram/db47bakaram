@@ -19,6 +19,7 @@ var foxRouter = require('./routes/fox');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
 var resourceRouter = require('./routes/resource');
+
 var fox = require("./models/fox"); 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use('/fox', foxRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
 app.use('/resource', resourceRouter);
+
 // We can seed the collection if needed on server start 
 async function recreateDB(){ 
   // Delete everything 
