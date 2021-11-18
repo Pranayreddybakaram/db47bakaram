@@ -1,0 +1,22 @@
+extends layout 
+ 
+block content 
+  h1= title 
+ 
+  - let foxid = toShow._id 
+  - let name = toShow.name 
+  - let color = toShow.color 
+  - let weight = toShow.weight 
+  div 
+    div.row 
+      div(class='foxAttr mr-3') fox ID is: 
+      div #{foxid} 
+    div.row 
+      div(class='foxAttr mr-3') fox name is: 
+      div #{name} 
+    div.row 
+      div(class='foxAttr mr-3') fox weight is: 
+      div #{weight} 
+    div.row 
+      div(class='foxAttr mr-3') fox color is: 
+      div #{color} 
